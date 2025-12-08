@@ -9,7 +9,7 @@ import { Manifesto } from "./pages/Manifesto";
 import { WhitePaper } from "./pages/WhitePaper";
 import { Regulatory } from "./pages/Regulatory";
 import { FAQ } from "./pages/FAQ";
-import { Partners } from "./pages/Partners";
+// import { Partners } from "./pages/Partners";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 export const App: FC = () => {
@@ -27,7 +27,7 @@ export const App: FC = () => {
                 <Route path="/white-paper" element={<WhitePaper />} />
                 <Route path="/regulatory" element={<Regulatory />} />
                 <Route path="/faq" element={<FAQ />} />
-                <Route path="/partners" element={<Partners />} />
+                {/* <Route path="/partners" element={<Partners />} /> */}
               </Routes>
             </Main>
             <TableOfContents />
