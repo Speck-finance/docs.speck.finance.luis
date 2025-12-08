@@ -13,7 +13,7 @@ const menuItems: MenuItem[] = [
   { title: "Manifesto", path: "/manifesto" },
   { title: "Whitepaper", path: "/white-paper" },
   { title: "Regulatory", path: "/regulatory" },
-  { title: "Partners", path: "/partners" },
+  // { title: "Partners", path: "/partners" },
   { title: "FAQ", path: "/faq" },
 ];
 
