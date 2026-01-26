@@ -76,6 +76,19 @@ export const Regulatory: FC = () => {
         <li>24/7 monitoring and incident response</li>
       </ul>
 
+      <h2 className="text-2xl font-bold mt-8 mb-4">Locations</h2>
+
+      <ul className="list-disc pl-6 mb-4">
+        <li>
+          <strong>Costa Rica:</strong> Mata Redonda, Boulevard Ernesto Rohmoser,
+          Sabana Business Center Building, 12th Floor – Province 01 San Jose –
+          Canton 01 San Jose, Republic of Costa Rica, ZIP Code: 10108
+        </li>
+        <li>
+          <strong>Zug, Switzerland:</strong> Untere Roostmatt 8, 6300 Zug, CH
+        </li>
+      </ul>
+
       <h2 className="text-2xl font-bold mt-8 mb-4">Details</h2>
 
       <ul className="list-disc pl-6 mb-4">
@@ -83,12 +96,6 @@ export const Regulatory: FC = () => {
           Company Name: Speck Finance Sociedad de Responsabilidad Limitada
         </li>
         <li>Tax Number: 3-102-923020</li>
-        <li>
-          Address: Mata Redonda, Boulevard Ernesto Rohmoser, Sabana Business
-          Center Building, 12th Floor – Province 01 San Jose – Canton 01 San
-          Jose, Republic of Costa Rica
-        </li>
-        <li>ZIP Code: 10108</li>
       </ul>
     </div>
   );
