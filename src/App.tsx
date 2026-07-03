@@ -1,9 +1,11 @@
 import { FC } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { Sidebar } from "./components/Sidebar";
 import { Header } from "./components/Header";
 import { TableOfContents } from "./components/TableOfContents";
 import { Main } from "./components/Main";
+import { SeoHead } from "./components/SeoHead";
 import { Overview } from "./pages/Overview";
 import { Manifesto } from "./pages/Manifesto";
 import { WhitePaper } from "./pages/WhitePaper";
@@ -15,9 +17,11 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 export const App: FC = () => {
   return (
     <ThemeProvider>
-      <Router>
-        <div className="min-h-screen bg-white dark:bg-gray-900">
-          <Header />
+      <HelmetProvider>
+        <Router>
+          <SeoHead />
+          <div className="min-h-screen bg-white dark:bg-gray-900">
+            <Header />
           <div className="flex pt-14">
             <Sidebar />
             <Main className="w-full lg:ml-44 lg:mr-64">
@@ -32,8 +36,9 @@ export const App: FC = () => {
             </Main>
             <TableOfContents />
           </div>
-        </div>
-      </Router>
+          </div>
+        </Router>
+      </HelmetProvider>
     </ThemeProvider>
   );
 };
