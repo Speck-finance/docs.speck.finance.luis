@@ -16,7 +16,13 @@ const priority = Object.fromEntries(
   DOC_ROUTES.map((route) => [route.path, route.priority]),
 );
 
+const normalizeBase = (value: string | undefined): string => {
+  const base = value?.trim() || "/";
+  return base.endsWith("/") ? base : `${base}/`;
+};
+
 export default defineConfig({
+  base: normalizeBase(process.env.VITE_BASE_PATH),
   plugins: [
     react(),
     Sitemap({

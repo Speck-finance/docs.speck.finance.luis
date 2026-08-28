@@ -1,0 +1,16 @@
+name: Trigger landing deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger speck-home-08 production deploy
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.LANDING_REPO_DISPATCH_TOKEN }}
+          repository: Speck-finance/speck-home-08
+          event-type: docs-updated
